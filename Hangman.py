@@ -1,5 +1,7 @@
 from tkinter import *
 from string import ascii_uppercase
+import random
+
 
 window = Tk()
 window.title("Hangman")
@@ -10,8 +12,22 @@ photos = [PhotoImage(file="images/hang0.png"), PhotoImage(file="images/hang1.png
           PhotoImage(file="images/hang4.png"), PhotoImage(file="images/hang5.png"), PhotoImage(file="images/hang6.png"), PhotoImage(file="images/hang7.png"),
           PhotoImage(file="images/hang8.png"), PhotoImage(file="images/hang9.png"), PhotoImage(file="images/hang10.png"), PhotoImage(file="images/hang11.png")]
 
+def newGame():
+    global the_word_withSpaces
+    global numberOfGuesses
+    numberOfGuesses = 0
+    imglabel.config(image=photos[0])
+    the_word = random.choice(word_list)
+    the_word_withSpaces = " ".join(the_word)
+    lblword.set(" ".join("_"*len(the_word)))
+    
+
+
 def guess():
     global numberOfGuesses
+    txt = list(the_word_withSpaces)
+    guessed = list(lblword.get())
+
 
 imglabel = Label(window)
 imglabel.grid(row=0, column=0, columnspan=3, padx=10, pady=10)
