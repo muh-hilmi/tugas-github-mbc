@@ -6,8 +6,9 @@ import random
 window = Tk()
 window.title("Hangman (Tebak Negara)")
 
-list_negara = ["INDONESIA","MALAYSIA","THAILAND","LAOS","NORWAY","ARGENTINA","ICELAND","GERMANY","TURKEY","JAPAN", 
-             "INDIA","MOROCCO","PAKISTAN","NEPAL","HAITI","MEXICO"]
+list_negara = ["INDONESIA","MALAYSIA","THAILAND","LAOS","NORWAY","ARGENTINA","ICELAND","GERMANY","TURKEY","JAPAN",
+                "INDIA","MOROCCO","PAKISTAN","NEPAL","HAITI","MEXICO","AFGHANISTAN","ALBANIA","ALGERIA","ANDORRA",
+                "ANGOLA","ARGENTINA","ARMENIA","AUSTRALIA","AUSTRIA","AZERBAIJAN", "FIJI","FINLAND","FRANCE"]
 
 gambar = [PhotoImage(file="images/hang0.png"), PhotoImage(file="images/hang1.png"), PhotoImage(file="images/hang2.png"), PhotoImage(file="images/hang3.png"),
           PhotoImage(file="images/hang4.png"), PhotoImage(file="images/hang5.png"), PhotoImage(file="images/hang6.png"), PhotoImage(file="images/hang7.png"),
